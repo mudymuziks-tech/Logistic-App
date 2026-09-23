@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(17, 29, 34);
   overflow: hidden;
@@ -21,8 +25,9 @@ body {
 }
 
 .logistic-logo {
-  width: 96px;
-  height: 96px;
+  width: 128px;
+  height: 128px;
+  aspect-ratio: 1 / 1;
   margin-bottom: 16px;
   object-fit: contain;
   filter: invert(1);
@@ -59,12 +64,27 @@ body {
 }
 
 .get-started {
+  min-width: 180px;
+  min-height: 48px;
+  padding-inline: 24px;
   padding-block: 15px;
   border-radius: 22px;
   border: none;
   background-color: rgb(209, 178, 0);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
   font-weight: bold;
+  line-height: 1.2;
   cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.get-started:hover {
+  background-color: rgb(231, 199, 25);
+}
+
+.get-started:active {
+  transform: translateY(1px);
 }
 
 .if-you-have-an-account {
@@ -80,6 +100,12 @@ body {
   font-size: 12px;
   margin: 8px 0 1.5px 0;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.login:hover,
+.login:focus-visible {
+  text-decoration: underline;
 }
 
 .login-container {
@@ -118,6 +144,11 @@ body {
     width: 100%;
   }
 
+  .logistic-logo {
+    width: clamp(82px, 24vw, 100px);
+    height: clamp(82px, 24vw, 100px);
+  }
+
   .brand-name {
     font-size: 42px;
     line-height: 1;
@@ -143,7 +174,7 @@ body {
 
   .second-section-open-page {
     position: static;
-    width: auto;
+    width: calc(100% - 40px);
     align-items: center;
     gap: 12px;
     margin-inline: 20px;
@@ -151,8 +182,9 @@ body {
 
   .get-started {
     width: 100%;
-    min-height: 48px;
-    padding: 12px 24px;
+    min-height: 54px;
+    padding: 14px 24px;
+    font-size: 16px;
   }
 
   .login-container {
@@ -169,5 +201,20 @@ body {
   .if-you-have-an-account,
   .login {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .slogan-container {
+    gap: 5px;
+  }
+
+  .if-you-have-an-account,
+  .login {
+    font-size: 12px;
   }
 }
