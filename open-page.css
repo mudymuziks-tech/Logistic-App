@@ -118,6 +118,12 @@ body {
     width: 100%;
   }
 
+  .logistic-logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+  }
+
   .brand-name {
     font-size: 42px;
     line-height: 1;
