@@ -81,6 +81,7 @@ body {
 }
 
 .third-section-open-page {
+  position: relative;
   width: 100%;
   flex: 1;
   min-height: 0;
@@ -93,4 +94,67 @@ body {
   display: block;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 600px) {
+  .open-page-container {
+    height: calc(100vh - 120px);
+    margin-top: 120px;
+  }
+
+  .first-section-open-page {
+    width: 100%;
+  }
+
+  .brand-name {
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .brand-slogan {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  .slogan-container {
+    gap: 8px;
+  }
+
+  .third-section-open-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 25px;
+  }
+
+  .second-section-open-page {
+    position: static;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+  }
+
+  .get-started {
+    min-width: 180px;
+    min-height: 48px;
+    padding: 12px 24px;
+  }
+
+  .login-container {
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .open-page-hero-image {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+  }
+
+  .if-you-have-an-account,
+  .login {
+    font-size: 13px;
+  }
 }
