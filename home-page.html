@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Home-Page
+    </title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <header class="home-header">
+      <div class="home-header-content">
+        <section class="location-section">
+          <div class="location-selector">
+            <img class="location-icon" src="images/logistic navs/location_on_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Location">
+            <span class="location-name">Lagos, Nigeria</span>
+            <button class="location-dropdown-button" type="button" aria-label="Choose your Nigerian city" aria-expanded="false" aria-controls="city-menu">
+              <img class="location-dropdown-icon" src="images/logistic navs/keyboard_arrow_down_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+            </button>
+            <div class="city-menu" id="city-menu" role="listbox" aria-label="Nigerian cities">
+              <button class="city-option selected-city" type="button" role="option" aria-selected="true" data-city="Lagos, Nigeria">Lagos, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Abuja, Nigeria">Abuja, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Ibadan, Nigeria">Ibadan, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Port Harcourt, Nigeria">Port Harcourt, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Kano, Nigeria">Kano, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Benin City, Nigeria">Benin City, Nigeria</button>
+              <button class="city-option" type="button" role="option" aria-selected="false" data-city="Enugu, Nigeria">Enugu, Nigeria</button>
+            </div>
+          </div>
+        </section>
+        <section class="notification-section">
+          <img class="notification-icon" src="images/logistic navs/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Notifications">
+        </section>
+      </div>
+    </header>
+
+    <main class="home-main">
+      <div class="home-content">
+        <section class="search-section">
+          <div class="search-container">
+            <div class="search-input-container">
+              <img class="search-icon" src="images/logistic navs/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Search">
+              <input class="search-input" type="text" placeholder="Search for items">
+            </div>
+          </div>
+          <div class="cart-container">
+            <img class="cart-icon" src="images/logistic navs/shopping_cart_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="Shopping cart">
+          </div>
+        </section>
+
+
+        <section class="promo-section">
+          <div class="featured-promo-container">
+            <img class="featured-promo-image" src="images/for home/49cfdb4f-94a4-46c2-b6d6-3da782d354d7.jpg" alt="Featured delivery offer">
+
+            <div class="featured-promo-content">
+              <h3 class="featured-promo-title">Fresh Groceries<br>At Your Doorstep</h3>
+              <p class="featured-promo-description">Quality Products. Fast Delivery.</p>
+              <button class="featured-promo-button" type="button">Shop Now</button>
+            </div>
+          </div>
+
+
+          <div class="promo-grid">
+            <div class="promo-card promo-card-one">
+              <img class="promo-image" src="images/for home/734d681b-d34c-47ec-b3e1-96ca08c65d96.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Groceries</p>
+            </div>
+
+            <div class="promo-card promo-card-two">
+              <img class="promo-image" src="images/for home/860cfc65-ab24-4aba-a5df-177d65a6602d.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Food and Drinks</p>
+            </div>
+
+            <div class="promo-card promo-card-three">
+              <img class="promo-image" src="images/for home/01606cce-df94-4ba6-a603-e238a24326db.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Pharmacy</p>
+            </div>
+
+            <div class="promo-card promo-card-four">
+              <img class="promo-image" src="images/for home/92784eff-bc96-4226-927d-33b035bec6b9.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Packages</p>
+            </div>
+
+            <div class="promo-card promo-card-five">
+              <img class="promo-image" src="images/for home/68d859fc-eac9-4c61-a119-ff4f36ea73e1.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Retails</p>
+            </div>
+
+            <div class="promo-card promo-card-six">
+              <img class="promo-image" src="images/for home/d65db220-2750-441e-b793-56e176d4379f.jpg" alt="Delivery offer">
+              <p class="promo-card-name">Documents</p>
+            </div>
+          </div>
+        </section>
+        <section class="popular-section">
+          <div class="popular-section-header">
+            <div class="popular-title">Popular Near You</div>
+            <div class="see-all-link">See All</div>
+          </div>
+          <div class="popular-items-grid">
+
+            <div class="popular-item popular-item-one">
+              <div class="popular-item-image-container">
+                <img class="popular-item-image" src="images/9b473279-ccb8-4645-85fa-ec7adfeac8a8.jpg" alt="Popular delivery item">
+              </div>
+              <div class="popular-item-details">
+                <h3 class="popular-item-title">Boutique</h3>
+                <p class="popular-item-meta">Clothing &#8226; 20 &hyphen; 30 min</p>
+              </div>
+            </div>
+
+            <div class="popular-item popular-item-two">
+              <div class="popular-item-image-container">
+                <img class="popular-item-image" src="images/65883f9b-2f98-4f94-b65c-7df1794b003d.jpg" alt="Popular delivery item">
+              </div>
+              <div class="popular-item-details">
+                <h3 class="popular-item-title">Burger Palace</h3>
+                <p class="popular-item-meta">Fast Food &#8226; 10 &hyphen; 20 min</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section></section>
+      </div>
+    </main>
+
+    <nav class="bottom-navigation" aria-label="Primary navigation">
+      <div class="bottom-navigation-items">
+        <a class="bottom-navigation-item active-navigation-item" href="home-page.html" aria-current="page">
+          <img class="bottom-navigation-icon" src="images/logistic navs/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <span class="bottom-navigation-label">Home</span>
+        </a>
+        <a class="bottom-navigation-item" href="#search">
+          <img class="bottom-navigation-icon" src="images/logistic navs/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <span class="bottom-navigation-label">Search</span>
+        </a>
+        <a class="bottom-navigation-item" href="#orders">
+          <img class="bottom-navigation-icon" src="images/logistic navs/orders_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <span class="bottom-navigation-label">Orders</span>
+        </a>
+        <a class="bottom-navigation-item" href="#favorites">
+          <img class="bottom-navigation-icon" src="images/logistic navs/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <span class="bottom-navigation-label">Favorites</span>
+        </a>
+        <a class="bottom-navigation-item" href="#account">
+          <img class="bottom-navigation-icon" src="images/logistic navs/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+          <span class="bottom-navigation-label">Account</span>
+        </a>
+      </div>
+    </nav>
+    <script src="home.js"></script>
+  </body>
+</html>

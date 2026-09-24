@@ -1,69 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
+  background-color: rgb(17, 29, 34);
+  overflow: hidden;
 }
 
-b {
-  font-size: 35px;
-}
-
-.first-section {
-  display: flow-root;
-  background: linear-gradient(to bottom, rgb(255, 65, 65), purple, slateblue);
-}
-
-
-
-
-.overall-container {
-  margin-inline: 50px;
-}
-
-.sub-overall-container {
-  margin-block: 50px;
-}
-
-.the-heading {
-  font-family: Arial;
-  font-size: 25px;
-}
-
-.separate-color {
-  font-size: 35px;
-  font-weight: 900;
-  background: linear-gradient(to right, gold, red, white);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.underlined {
-  color: rgb(23, 219, 209);
+.open-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 150px);
+  margin-top: 100px;
+  overflow: hidden;
 }
 
 
-/* second section */
-
-
-.second-section {
-  display: flow-root;
+.first-section-open-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.first-container-second-section {
-  margin-inline: 15px;
+.logistic-logo {
+  width: 128px;
+  height: 128px;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 16px;
+  object-fit: contain;
+  filter: invert(1);
+  mix-blend-mode: screen;
 }
 
-.second-container-second-section {
-  margin-block: 20px;
+.brand-name {
+  font-family: Roboto, Arial;
+  margin: 0 0 20px 0;
+  color: white;
 }
 
-.container-direct-to-the-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50px;
+.brand-name span {
+  color: rgb(209, 178, 0);
 }
 
-.the-image-itself {
+.brand-slogan {
+  font-family: Roboto, Arial;
+  margin: 0 0 50px 0;
+  color: white;
+  font-size: 16px;
+}
+
+.slogan-container {
+  display: flex;
+  gap: 5px;
+}
+
+.second-section-open-page {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 25px;
+}
+
+.get-started {
+  min-width: 180px;
+  min-height: 48px;
+  padding-inline: 24px;
+  padding-block: 15px;
+  border-radius: 22px;
+  border: none;
+  background-color: rgb(209, 178, 0);
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.get-started:hover {
+  background-color: rgb(231, 199, 25);
+}
+
+.get-started:active {
+  transform: translateY(1px);
+}
+
+.if-you-have-an-account {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 8px 0 1.5px 0;
+}
+
+.login {
+  color: rgb(209, 178, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  margin: 8px 0 1.5px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login:hover,
+.login:focus-visible {
+  text-decoration: underline;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.third-section-open-page {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  background-color: rgb(17, 29, 34);
+  overflow: visible;
+}
+
+.open-page-hero-image {
   width: 100%;
   height: 100%;
-  border-radius: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 100%);
+}
+
+@media (max-width: 600px) {
+  .open-page-container {
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+  }
+
+  .first-section-open-page {
+    width: 100%;
+  }
+
+  .logistic-logo {
+    width: clamp(82px, 24vw, 100px);
+    height: clamp(82px, 24vw, 100px);
+  }
+
+  .brand-name {
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 18px;
+  }
+
+  .brand-slogan {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  .slogan-container {
+    gap: 8px;
+  }
+
+  .third-section-open-page {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    margin-top: 25px;
+  }
+
+  .second-section-open-page {
+    position: static;
+    width: calc(100% - 40px);
+    align-items: center;
+    gap: 12px;
+    margin-inline: 20px;
+  }
+
+  .get-started {
+    width: 100%;
+    min-height: 54px;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+
+  .login-container {
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .open-page-hero-image {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+  }
+
+  .if-you-have-an-account,
+  .login {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name {
+    font-size: 36px;
+  }
+
+  .slogan-container {
+    gap: 5px;
+  }
+
+  .if-you-have-an-account,
+  .login {
+    font-size: 12px;
+  }
 }

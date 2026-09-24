@@ -115,6 +115,12 @@ body {
   gap: 10px;
 }
 
+.location-dropdown-icon {
+  width: 24px;
+  height: 24px;
+  transform: rotate(90deg);
+}
+
 .third-section-open-page {
   position: relative;
   width: 100%;
