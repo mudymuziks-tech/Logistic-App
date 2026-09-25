@@ -1,0 +1,242 @@
+:root {
+  --account-page: rgb(17, 29, 34);
+  --account-surface: rgb(27, 43, 48);
+  --account-text: rgb(245, 247, 243);
+  --account-muted: rgb(171, 188, 185);
+  --account-accent: rgb(209, 178, 0);
+  --account-border: rgba(224, 235, 231, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--account-page);
+  color: var(--account-text);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.account-header {
+  border-bottom: 1px solid var(--account-border);
+  background: rgba(17, 29, 34, 0.96);
+}
+
+.account-header-content,
+.account-content {
+  width: min(100% - 32px, 600px);
+  margin: 0 auto;
+}
+
+.account-header-content {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-page-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.account-settings-icon {
+  width: 22px;
+  height: 28px;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.account-content {
+  padding: 28px 0 120px;
+}
+
+.account-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+}
+
+.account-avatar-wrap {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  overflow: hidden;
+  border: 2px solid rgba(209, 178, 0, 0.65);
+  border-radius: 50%;
+}
+
+.account-avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.account-profile-details {
+  min-width: 0;
+}
+
+.account-name {
+  margin: 0 0 5px;
+  font-size: 17px;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.account-email {
+  color: var(--account-muted);
+  font-size: 14px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.account-email:hover {
+  color: var(--account-accent);
+}
+
+.account-menu {
+  overflow: hidden;
+  border: 1px solid var(--account-border);
+  border-radius: 16px;
+}
+
+.account-menu-list {
+  padding: 4px 16px;
+}
+
+.account-menu-item {
+  display: grid;
+  min-height: 60px;
+  grid-template-columns: 28px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--account-border);
+  color: var(--account-text);
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease;
+}
+
+.account-menu-item:last-child {
+  border-bottom: 0;
+}
+
+.account-menu-item:hover,
+.account-menu-item:focus-visible {
+  color: var(--account-accent);
+  outline: none;
+}
+
+.account-menu-icon,
+.account-menu-trailing {
+  display: grid;
+  place-items: center;
+}
+
+.account-menu-icon img {
+  width: 22px;
+  height: 24px;
+}
+
+.account-menu-trailing img {
+  width: 24px;
+  height: 24px;
+}
+
+.account-menu-label {
+  font-size: 13px;
+}
+
+.account-logout {
+  color: #f19a8d;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--account-border);
+  background: rgba(17, 29, 34, 0.96);
+  backdrop-filter: blur(10px);
+}
+
+.bottom-navigation-items {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: min(100%, 560px);
+  margin: 0 auto;
+}
+
+.bottom-navigation-item {
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 8px;
+  color: var(--account-muted);
+  font-size: 11px;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.bottom-navigation-item:hover,
+.bottom-navigation-item:focus-visible,
+.active-navigation-item {
+  background: rgba(209, 178, 0, 0.1);
+  color: var(--account-accent);
+}
+
+.active-navigation-item .bottom-navigation-icon {
+  filter: brightness(0) saturate(100%) invert(72%) sepia(99%) saturate(1861%) hue-rotate(9deg) brightness(92%) contrast(101%);
+}
+
+.bottom-navigation-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.bottom-navigation-label {
+  line-height: 1;
+}
+
+@media (max-width: 480px) {
+  .account-header-content,
+  .account-content {
+    width: min(100% - 24px, 600px);
+  }
+
+  .account-content {
+    padding-top: 20px;
+  }
+
+  .account-profile {
+    gap: 12px;
+    padding-left: 20px;
+  }
+
+  .account-menu-list {
+    padding: 2px 12px;
+  }
+
+  .account-menu-item {
+    min-height: 56px;
+  }
+
+  .bottom-navigation {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .bottom-navigation-label {
+    font-size: 9px;
+  }
+}
