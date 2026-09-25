@@ -158,7 +158,7 @@ body {
 	background-color: var(--field-background);
 	color: var(--text-color);
 	font: inherit;
-	font-size: 14px;
+	font-size: 16px;
 	transition: border-color 160ms ease, box-shadow 160ms ease;
 }
 
@@ -220,6 +220,14 @@ body {
 
 .signup-button:hover {
 	background-color: var(--accent-hover);
+}
+
+.signup-button:focus-visible,
+.google-signup-button:focus-visible,
+.apple-signup-button:focus-visible,
+.login-link:focus-visible {
+	outline: 2px solid var(--accent-color);
+	outline-offset: 3px;
 }
 
 .signup-button:active,
@@ -333,7 +341,24 @@ body {
 	}
 
 	.login-page-container {
+		width: 100%;
 		padding: 26px 0 24px;
 		border-radius: 16px;
+	}
+
+	.account-intro-section {
+		padding-inline: 24px;
+	}
+
+	.account-form-section,
+	.signup-section,
+	.social-signup-section {
+		padding-inline: 20px;
+	}
+
+	.google-signup-button,
+	.apple-signup-button {
+		padding-right: 44px;
+		padding-left: 52px;
 	}
 }

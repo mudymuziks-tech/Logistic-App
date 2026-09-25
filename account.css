@@ -195,7 +195,10 @@ body {
   color: var(--account-accent);
 }
 
-.active-navigation-item .bottom-navigation-icon {
+.bottom-navigation-item:hover .bottom-navigation-icon,
+.bottom-navigation-item:focus-visible .bottom-navigation-icon,
+.active-navigation-item .bottom-navigation-icon,
+.bottom-navigation-item[aria-current="page"] .bottom-navigation-icon {
   filter: brightness(0) saturate(100%) invert(72%) sepia(99%) saturate(1861%) hue-rotate(9deg) brightness(92%) contrast(101%);
 }
 

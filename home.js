@@ -2,6 +2,8 @@ const locationSelector = document.querySelector('.location-selector');
 const locationName = document.querySelector('.location-name');
 const dropdownButton = document.querySelector('.location-dropdown-button');
 const cityOptions = document.querySelectorAll('.city-option');
+const searchInput = document.querySelector('.search-input');
+const popularItems = document.querySelectorAll('.popular-item');
 
 function closeCityMenu() {
   locationSelector.classList.remove('city-menu-open');
@@ -24,6 +26,14 @@ cityOptions.forEach((cityOption) => {
     });
 
     closeCityMenu();
+  });
+});
+
+searchInput.addEventListener('input', () => {
+  const query = searchInput.value.trim().toLocaleLowerCase();
+
+  popularItems.forEach((item) => {
+    item.hidden = !item.textContent.toLocaleLowerCase().includes(query);
   });
 });
 
